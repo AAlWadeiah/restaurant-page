@@ -1,9 +1,7 @@
-export default function initPage() {
-  const contentContainer = document.querySelector("#content");
-
+export default function loadHome(container) {
   const header = document.createElement("h1");
   header.textContent = "Taste of Palestine";
-  contentContainer.appendChild(header);
+  container.appendChild(header);
 
   const description = document.createElement("p");
   description.textContent =
@@ -20,5 +18,5 @@ export default function initPage() {
   }
 
   description.appendChild(recipeList);
-  contentContainer.appendChild(description);
+  container.appendChild(description);
 }
