@@ -2,6 +2,7 @@ import loadHome from "./homePage";
 import loadMenu from "./menuPage";
 import loadAbout from "./aboutPage";
 import loadContact from "./contactPage";
+import "./assets/css/main.css";
 
 const contentContainer = document.querySelector("#content");
 const navbar = document.querySelector("#navbar");
@@ -33,6 +34,7 @@ navbar.addEventListener("click", (e) => {
       break;
     default:
       console.log("clicked elsewhere");
+      loadHome(contentContainer);
       break;
   }
 });
