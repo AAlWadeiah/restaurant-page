@@ -18,17 +18,6 @@ export default function loadHome(container) {
   heroImg.classList.toggle("hero");
   container.appendChild(heroImg);
 
-  // const recipeList = document.createElement("ul");
-
-  // let recipeArr = ["Maqluba", "Moussaka", "Musakhan"];
-
-  // for (let r of recipeArr) {
-  //   const rLi = document.createElement("li");
-  //   rLi.textContent = r;
-  //   recipeList.appendChild(rLi);
-  // }
-  // description.appendChild(recipeList);
-
   let hoursArr = [
     "Sunday: 8am - 8pm",
     "Monday: 6am - 6pm",
@@ -46,14 +35,10 @@ export default function loadHome(container) {
   hoursTitle.textContent = "Hours";
   hoursDiv.appendChild(hoursTitle);
 
-  // const hoursList = document.createElement("ul");
-
   for (const hr of hoursArr) {
     const hrLi = document.createElement("p");
     hrLi.textContent = hr;
-    // hoursList.appendChild(hrLi);
     hoursDiv.appendChild(hrLi);
   }
-  // hoursDiv.appendChild(hoursList);
   container.appendChild(hoursDiv);
 }
