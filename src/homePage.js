@@ -1,23 +1,33 @@
+import Hero from "./assets/imgs/olive-oil.jpg";
+
 export default function loadHome(container) {
-  const header = document.createElement("h1");
-  header.textContent = "Taste of Palestine";
-  container.appendChild(header);
+  const pageTitle = document.createElement("h1");
+  pageTitle.textContent = "Taste of Palestine";
+  pageTitle.classList.toggle("page-header");
+  container.appendChild(pageTitle);
 
-  const description = document.createElement("p");
-  description.textContent =
-    "We are pleased to present to you some of the best Palestinian dishes we can offer, including:";
+  const subheader = document.createElement("p");
+  subheader.textContent = "Discover the flavors of Palestine";
+  subheader.classList.toggle("page-subheader");
+  container.appendChild(subheader);
 
-  const recipeList = document.createElement("ul");
+  const heroImg = document.createElement("img");
+  heroImg.src = Hero;
+  heroImg.width = 1000;
+  heroImg.alt = "Palestinian olive oil";
+  heroImg.classList.toggle("hero");
+  container.appendChild(heroImg);
 
-  let recipeArr = ["Maqluba", "Moussaka", "Musakhan"];
+  // const recipeList = document.createElement("ul");
 
-  for (let r of recipeArr) {
-    const rLi = document.createElement("li");
-    rLi.textContent = r;
-    recipeList.appendChild(rLi);
-  }
-  description.appendChild(recipeList);
-  container.appendChild(description);
+  // let recipeArr = ["Maqluba", "Moussaka", "Musakhan"];
+
+  // for (let r of recipeArr) {
+  //   const rLi = document.createElement("li");
+  //   rLi.textContent = r;
+  //   recipeList.appendChild(rLi);
+  // }
+  // description.appendChild(recipeList);
 
   let hoursArr = [
     "Sunday: 8am - 8pm",
@@ -30,18 +40,20 @@ export default function loadHome(container) {
   ];
 
   const hoursDiv = document.createElement("div");
+  hoursDiv.classList.toggle("section");
 
   const hoursTitle = document.createElement("h2");
   hoursTitle.textContent = "Hours";
   hoursDiv.appendChild(hoursTitle);
 
-  const hoursList = document.createElement("ul");
+  // const hoursList = document.createElement("ul");
 
   for (const hr of hoursArr) {
-    const hrLi = document.createElement("li");
+    const hrLi = document.createElement("p");
     hrLi.textContent = hr;
-    hoursList.appendChild(hrLi);
+    // hoursList.appendChild(hrLi);
+    hoursDiv.appendChild(hrLi);
   }
-  hoursDiv.appendChild(hoursList);
+  // hoursDiv.appendChild(hoursList);
   container.appendChild(hoursDiv);
 }

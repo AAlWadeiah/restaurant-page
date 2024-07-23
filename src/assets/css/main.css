@@ -51,7 +51,48 @@ button {
     color: var(--rusty-red);
 }
 
-
 #content {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+
+.page-header {
+    margin-bottom: 8px;
+    font-size: 36px;
+    color: var(--dark-moss-green);
+}
+
+.page-subheader {
+    margin-bottom: 8px;
+}
+
+.hero {
+    margin-bottom: 8px;
+}
+
+.section {
+    width: max(65ch, 50vw);
+    margin: 16px 0px;
+    border: 2px solid black;
     text-align: center;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.section > h2:first-child {
+    border-bottom: 2px solid black;
+    padding: 12px 0px;
+}
+
+.section > div,
+.section > p {
+    margin: 12px;
+}
+
+.menu-item {
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 4px
 }

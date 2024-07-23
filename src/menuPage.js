@@ -65,10 +65,12 @@ const MenuItems = {
 export default function loadMenu(container) {
   const pageTitle = document.createElement("h1");
   pageTitle.textContent = "Menu";
+  pageTitle.classList.toggle("page-header");
   container.appendChild(pageTitle);
 
   for (const key in MenuItems) {
     const groupDiv = document.createElement("div");
+    groupDiv.classList.toggle("section");
     const title = document.createElement("h2");
     title.textContent = `${key}`;
     groupDiv.appendChild(title);
@@ -76,6 +78,7 @@ export default function loadMenu(container) {
     const menuGroup = MenuItems[key];
     for (const item in menuGroup) {
       const itemDiv = document.createElement("div");
+      itemDiv.classList.toggle("menu-item");
 
       const itemTitle = document.createElement("h3");
       itemTitle.textContent = menuGroup[item][0];
@@ -86,7 +89,7 @@ export default function loadMenu(container) {
       itemDiv.appendChild(itemDesc);
 
       const itemPrice = document.createElement("p");
-      itemPrice.textContent = menuGroup[item][2];
+      itemPrice.textContent = `$${menuGroup[item][2]}`;
       itemDiv.appendChild(itemPrice);
 
       groupDiv.appendChild(itemDiv);
