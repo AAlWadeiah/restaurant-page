@@ -3,9 +3,17 @@ import loadMenu from "./menuPage";
 import loadAbout from "./aboutPage";
 import loadContact from "./contactPage";
 import "./assets/css/main.css";
+import Logo from "./assets/imgs/flag-of-palestine.svg";
 
 const contentContainer = document.querySelector("#content");
 const navbar = document.querySelector("#navbar");
+
+let logo = document.createElement("img");
+logo.src = Logo;
+logo.width = 60;
+logo.alt = "Flag of Palestine logo";
+const logoDiv = document.querySelector("#logo");
+logoDiv.appendChild(logo);
 
 function clearContent() {
   contentContainer.innerHTML = "";
